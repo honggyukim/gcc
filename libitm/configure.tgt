@@ -62,7 +62,7 @@ case "${target_cpu}" in
 	  *)
 	    if test -z "$with_arch"; then
 	      XCFLAGS="${XCFLAGS} -march=i486 -mtune=${target_cpu}"
-	      XCFLAGS="${XCFLAGS} -fomit-frame-pointer"
+	      XCFLAGS="${XCFLAGS}"
 	    fi
 	esac
 	XCFLAGS="${XCFLAGS} -mrtm"
@@ -103,7 +103,7 @@ case "${target_cpu}" in
 	case " ${CC} ${CFLAGS} " in
 	  *" -m32 "*)
 	    XCFLAGS="${XCFLAGS} -march=i486 -mtune=generic"
-	    XCFLAGS="${XCFLAGS} -fomit-frame-pointer"
+	    XCFLAGS="${XCFLAGS}"
 	    ;;
 	esac
 	XCFLAGS="${XCFLAGS} -mrtm"
